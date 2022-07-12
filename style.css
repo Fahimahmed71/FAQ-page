@@ -1,0 +1,121 @@
+:root{
+    --DancingScript: 'Dancing Script', cursive;
+    --oswald: 'Oswald', sans-serif;
+    --lora: 'Lora', serif;
+    --goldenrod: goldenrod;
+    --white: rgb(200, 200, 200);
+    --yellow: rgb(219, 118, 23);
+
+}
+
+::selection{
+    background-color: var(--blue);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title{
+    font-family: var(--DancingScript);
+    font-size: 40px;
+    font-weight: 700;
+    color: goldenrod;
+    display: flex;
+    justify-content: center;
+    margin: 5% 0 2% 0;
+}
+
+article{
+    display: grid;
+    justify-items: center;
+}
+
+.shadow{
+    box-shadow: inset 0px 0px 5px 3px rgb(100 100 100);
+    background-color: rgba(0, 0, 0, 0.411);
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 32rem;
+    margin: 20px;
+}
+
+.question-title{
+    font-family: var(--oswald);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    color: var(--goldenrod);
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn i:hover{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transition: 0.5s linear;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+}
+
+.answer-title{
+    font-family: var(--lora);
+    font-weight: 500;
+    color: var(--yellow);
+    margin-top: 2rem;
+    position: relative;
+}
+
+.answer-title::before{
+    content: '';
+    position: absolute;
+    border: 1px solid rgb(179, 179, 179);
+    width: 30vw;
+    top: -30%;
+}
+
+/* JS USE */
+.answer-title{
+    display: none;
+}
+
+.toggle .answer-title{
+    display: block;
+    
+}
+
+.minus-btn{
+    display: none;
+}
+
+.toggle .minus-btn{
+    display: inline;
+}
+
+.toggle .plus-btn{
+    display: none;
+}
